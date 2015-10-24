@@ -1,5 +1,6 @@
 #!/bin/bash
-CAMERA_ROOT=~/transcoder/camera
+VIDEO_PIPELINE_ROOT=~/video-pipeline
+CAMERA_ROOT=$VIDEO_PIPELINE_ROOT/camera
 source $CAMERA_ROOT/camera.conf
 
 url="http://$host:$port/transcode"
