@@ -1,0 +1,8 @@
+#!/bin/sh
+CAMERA_ROOT=~/video-pipeline/camera
+source $CAMERA_ROOT/camera.conf
+
+url="http://$host:$port/transcode"
+
+logger "Uploading video clip to $url"
+curl -X POST -d @$CAMERA_ROOT/sample.h264 $url

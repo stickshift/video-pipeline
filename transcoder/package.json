@@ -1,0 +1,17 @@
+{
+  "name": "transcoder",
+  "version": "1.0.0",
+  "description": "A simple video transcoder component based on ffmpeg",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Young (joven@alum.wpi.edu)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "fluent-ffmpeg": "^2.0.1",
+    "mkdirp": "^0.5.1",
+    "node-uuid": "^1.4.3"
+  }
+}
