@@ -1,8 +1,12 @@
-#!/bin/sh
-CAMERA_ROOT=~/video-pipeline/camera
+#!/bin/bash
+CAMERA_ROOT=~/transcoder/camera
 source $CAMERA_ROOT/camera.conf
 
 url="http://$host:$port/transcode"
 
 logger "Uploading video clip to $url"
-curl -X POST -d @$CAMERA_ROOT/sample.h264 $url
+if curl -X POST -d @$CAMERA_ROOT/sample.h264 $url;then
+    logger -p user.info "Uploaded video clip to $url"
+else
+    logger -p user.err "Upload to $url failed"
+fi
